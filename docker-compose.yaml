@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  resume-web:
+    command: pserve configs/${CONFIG:-resume.ini}
+    ports:
+      - "6543:6543"
+    volumes:
+      - ./resume:/code/resume
+      - ./configs:/code/configs
+      - ./content:/code/content
+    build:
+      context: .
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}

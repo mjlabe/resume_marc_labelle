@@ -1,0 +1,29 @@
+summary: Some details here
+
+jobs:
+  lead_engineer_acv:
+    name: Senior Engineer, R&D
+    company: ACV Auctions
+    subtitle: something here
+    dates: Nov 2019 - Present
+    duties:
+      - thing 1
+      - thing 2
+
+  senior_engineer_ih:
+    name: Senior Engineer
+    company: NSWC Indian Head, EOD Division
+    subtitle: something here
+    dates: Nov 2016 - Nov 2019
+    duties:
+      - thing 1
+      - thing 2
+
+  engineer_ih:
+    name: Senior Engineer
+    company: NSWC Indian Head
+    subtitle: something here
+    dates: July 2011 - Nov 2016
+    duties:
+      - thing 1
+      - thing 2

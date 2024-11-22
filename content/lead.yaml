@@ -1,0 +1,112 @@
+contact_info:
+  first_name: Marc
+  last_name: LaBelle
+  email: mjlabe@gmail.com
+  phone: 585-307-6472
+  linkedin: https://linkedin.com/in/marc-labelle-codes
+  github: https://github.com/mjlabe
+
+executive_summary: > 
+  Self-motivated and highly adaptable problem solver with a Master of Science in Physics and 13+ years of experience in
+  multiple facets of software engineering including full-stack web development, military safety critical systems, test
+  automation, and RF systems engineering. Skilled at analyzing problems and finding solutions in a variety of languages.
+  Proven ability to lead and work in a result-oriented team and meet demanding time goals. Strong written communication
+  skills with experience developing technical proposals and documents.
+
+qualifications:
+  - name: Python
+    icon: devicon-python-plain
+  - name: Django
+    icon: devicon-django-plain
+  - name: FastAPI
+    icon: devicon-fastapi-plain
+  - name: LabVIEW
+    icon: devicon-labview-plain
+  - name: Embedded
+    icon: devicon-embeddedc-plain
+  - name: C++
+    icon: devicon-cplusplus-plain
+  - name: C#
+    icon: devicon-csharp-plain
+  - name: Assembly
+    icon: devicon-custom-asm-plain
+  - name: Java
+    icon: devicon-java-plain
+  - name: React
+    icon: devicon-react-original
+  - name: Swift
+    icon: devicon-swift-plain
+  - name: MySQL
+    icon: devicon-mysql-plain
+  - name: Postgres
+    icon: devicon-postgresql-plain
+  - name: Apache
+    icon: devicon-apache-line
+  - name: NGINX
+    icon: devicon-nginx-original
+  - name: AWS
+    icon: devicon-amazonwebservices-plain
+  - name: Kafka
+    icon: devicon-apachekafka-original
+  - name: Docker
+    icon: devicon-docker-plain
+
+positions:
+  - title: Senior Engineer, R&D
+    employer: ACV Auctions
+    description: Responsible for creating ground-up, business focused solutions to complex problems.
+    date:
+      end: Present
+      start: Sept 2021
+    bullets:
+    - Lead and mentored team of backend and iOS engineers, including contractors, in all aspects of product development
+    - Designed, developed, and owned multiple API microservices utilizing Django, FastAPI, Postgres, MySQL, Docker, Kafka, etc.
+    - Architected event driven ML backend to run multiple inference models based on combinations of event streams utilizing Kafka
+    - Created, updated, and managed Kubernetes helm charts to manage and release reproducible builds with Docker and Jenkins CI/CD
+    - Developed iOS and embedded computer vision algorithms to automatically crop undercarriage images using OpenCV
+    - Developed embedded audio and sensor data logger which used by ML models to predict vehicle issues, resulting in ~$1M/yr in savings
+    - Converted legacy database from company merger to MySQL, integrating with inspection app and new API to reduce arbitration
+    - Developed cross-platform inspection application using React Native
+    - Drafted software and test requirements documents for contractor deliverables
+    - Provided support solutions to the field and mentored university students
+
+  - title: Senior Engineer
+    employer: NSWC Indian Head, EOD Division
+    description: Lead developer responsible for several multiple programs, including web development, embedded analysis and physics modeling.
+    date:
+      end: November 2019
+      start: October 2017
+    bullets:
+      - Lead developer, scrum master and full-stack developer building applications for processing intelligence reports and analyzing data
+      - Developed and managed agile workflows, providing monthly reports and metrics to the sponsor using D3 for data visualizations
+      - Responsible for all devops, including configuring and maintaining SQL Server, Apache, Jira, Bamboo, etc.
+      - Static and dynamic binary code analysis of safety-critical embedded devices to find bugs, vulnerabilities, and verify program/data flow
+      - Computational modeling explosive effects of EOD and Counter-IED methods/devices to develop, test, and verify their effectiveness
+      - text: "Patent US 10,921,089 B1: Shaped Charges for Focusing a Fluid Mass"
+        url: https://pdfpiw.uspto.gov/.piw?PageNum=0&docid=10921089&IDKey=46B62A4AC241%0D%0A&HomeUrl=http%3A%2F%2Fpatft.uspto.gov%2Fnetacgi%2Fnph-Parser%3FSect1%3DPTO1%2526Sect2%3DHITOFF%2526d%3DPALL%2526p%3D1%2526u%3D%25252Fnetahtml%25252FPTO%25252Fsrchnum.htm%2526r%3D1%2526f%3DG%2526l%3D50%2526s1%3D10921089.PN.%2526OS%3DPN%2F10921089%2526RS%3DPN%2F10921089
+
+  - title: Engineer
+    employer: NSWC Indian Head
+    description: Developed automated test sets, embedded software, and data analysis software for weapons systems.
+    date:
+      end: September 2017
+      start: July 2009
+    bullets:
+      - Lead designer and developer of automated test systems for counter radio-controlled improvised explosive device CREW system
+      - Tested RF signals, communications, system timings, electrical properties, etc.
+      - Identified and developed custom Counter-IED solutions for PIC, Atmel, and Arduino embedded devices used by EOD technicians
+      - Developed multiple workflow automation applications to reduce turn-around times by up to 50%
+      - Performed testing and acceptance reviews of contractor software and documentations deliverables
+      - Worked with contracts and collaborated with external vendors to expand and develop concepts and designs
+      - Developed embedded data acquisition logger software that recorded various real-time test data streams simultaneously
+
+educations:
+- institution_name: New Mexico Institute of Mining and Technology
+  degree_concentration: Astrophysics
+  degree_date: May 2009
+  degree_name: Masters of Science
+
+- institution_name: State University of New York at Fredonia
+  degree_concentration: Experimental
+  degree_date: May 2007
+  degree_name: Bachelors of Physics
