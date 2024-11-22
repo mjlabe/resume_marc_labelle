@@ -39,8 +39,6 @@ COPY --chown=resumer:resumer setup.py .
 RUN pip install . \
     && chown -R resumer:resumer /code
 
-RUN apt-get update && apt install fonts-open-sans
-
 USER resumer
 
 EXPOSE 6543

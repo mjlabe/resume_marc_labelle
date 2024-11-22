@@ -7,11 +7,11 @@ contact_info:
   github: https://github.com/mjlabe
 
 executive_summary: > 
-  Self-motivated and highly adaptable problem solver with a Master of Science in Physics and 13+ years of experience in
-  multiple facets of software engineering including full-stack web development, military safety critical systems, test
-  automation, and RF systems engineering. Skilled at analyzing problems and finding solutions in a variety of languages.
-  Proven ability to lead and work in a result-oriented team and meet demanding time goals. Strong written communication
-  skills with experience developing technical proposals and documents.
+  Self-motivated and highly adaptable problem solver with a Master of Science in Physics and experience in
+  multiple facets of software engineering, including web development, DevOps, military safety critical 
+  systems, mobile development, test automation, and RF systems engineering. Skilled at analyzing problems and finding 
+  solutions in a variety of languages. Proven ability to lead and work in a result-oriented team and meet demanding 
+  time goals. Strong written communication skills with experience developing technical proposals and documents.
 
 qualifications:
   - name: Python
@@ -28,8 +28,6 @@ qualifications:
     icon: devicon-cplusplus-plain
   - name: C#
     icon: devicon-csharp-plain
-  - name: Assembly
-    icon: devicon-custom-asm-plain
   - name: Java
     icon: devicon-java-plain
   - name: React
@@ -50,7 +48,9 @@ qualifications:
     icon: devicon-apachekafka-original
   - name: Docker
     icon: devicon-docker-plain
-  - name: Kubernetes
+  - name: Elastic
+    icon: devicon-elasticsearch-plain
+  - name: K8s
     icon: devicon-kubernetes-plain
 
 positions:
@@ -61,8 +61,9 @@ positions:
       end: Present
       start: Mar 2023
     bullets:
-      - ??
-      - Championed implementation of SaltStack and Nexus for managing secure embedded system OTA updates, improving system scalability
+      - Developed scalable Elasticsearch service to efficiently match machine learning outputs with vehicle arbitration issues
+      - Architected configuration-as-code deployment of Tyk gateway with CI/CD testing to quickly and safely expose APIs while tracking changes
+      - Championed K8s implementation of SaltStack with an API wrapper and Nexus to securely manage embedded system OTA updates
       - Architected event driven ML backend to run multiple inference models based on combinations of event streams utilizing Kafka
       - text: "Patent US 2023/0360667 A1: Multi-sensor Devices And Systems For Evaluating Vehicle Conditions"
         url: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230360667
@@ -75,7 +76,7 @@ positions:
       start: Sep 2021
     bullets:
     - Lead and mentored team of backend, iOS engineers, contractors, and university students in all aspects of product development
-    - Designed and developed API microservices with Django, FastAPI, Postgres, MySQL, Docker, Kafka Kubernetes, and Jenkins
+    - Designed and developed API microservices with Django, FastAPI, Postgres, MySQL, Docker, Kafka, Kubernetes, and Jenkins
     - Developed iOS and embedded computer vision algorithms to automatically crop undercarriage images using OpenCV
     - Developed embedded linux audio and sensor logger; data used by ML models to reduce arbitration, $1M/yr savings
     - Converted legacy SQLServer database from merger to MySQL and SQLite, integrating with backend and mobile
@@ -103,8 +104,8 @@ positions:
       start: Jul 2009
     bullets:
       - Lead designer and developer of automated test systems for counter radio-controlled improvised explosive device CREW system
-      - Tested RF signals, communications, system timings, electrical properties, etc.
-      - Identified and developed custom Counter-IED solutions for PIC, Atmel, and Arduino embedded devices used by EOD technicians
+      - Tested various systems including RF signals, communications, system timings, and electrical properties
+      - Identified and developed custom Counter-IED solutions for EOD technicians using PIC, Atmel, Arduino, Embedded C and Assembly
       - Developed multiple workflow automation applications to reduce turn-around times by up to 50%
       - Worked with contracts and external vendors to expand and develop concepts and designs, performing testing and acceptance reviews
       - Developed embedded data acquisition logger software that recorded various real-time test data streams simultaneously
@@ -113,9 +114,9 @@ educations:
 - institution_name: New Mexico Institute of Mining and Technology
   degree_concentration: Astrophysics
   degree_date: May 2009
-  degree_name: Masters of Science
+  degree_name: Master of Science
 
 - institution_name: State University of New York at Fredonia
   degree_concentration: Experimental
   degree_date: May 2007
-  degree_name: Bachelors of Physics
+  degree_name: Bachelor of Physics
