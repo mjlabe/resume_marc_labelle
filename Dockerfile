@@ -29,15 +29,16 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -q \
 COPY --chown=resumer:resumer requirements.txt .
 RUN pip install -r requirements.txt
 
+COPY --chown=resumer:resumer vendor/pyramid_precis_creative_template/ ./vendor/pyramid_precis_creative_template/
 COPY --chown=resumer:resumer resume/ ./resume/
+COPY --chown=resumer:resumer setup.py .
+RUN pip install . \
+    && chown -R resumer:resumer /code
+
 COPY --chown=resumer:resumer configs/ ./configs/
 COPY --chown=resumer:resumer content/ ./content/
 #COPY --chown=resumer:resumer README.txt .
 #COPY --chown=resumer:resumer CHANGES.txt .
-COPY --chown=resumer:resumer setup.py .
-
-RUN pip install . \
-    && chown -R resumer:resumer /code
 
 USER resumer
 

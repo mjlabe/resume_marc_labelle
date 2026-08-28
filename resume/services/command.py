@@ -57,10 +57,10 @@ def _generate_runtime_settings(config_uri: str) -> typing.Dict[str, str]:
 def _generate(
     file_name_suffix: str,
     url: str,
-    content_dir: Path,
+    output_dir: Path,
     config_uri: str,
 ):
-    pdf = Path(content_dir, f"{file_name_suffix}.pdf")
+    pdf = Path(output_dir, f"{file_name_suffix}.pdf")
     with _serve_web(config_uri):
         with requests.get(url, stream=True) as r:
             pdf.write_bytes(r.content)
@@ -75,16 +75,16 @@ def cli():
 @click.argument("config_uri", default="resume.ini")
 def resume_to_pdf(config_uri: str):
     """
-    Run webpage in the background and download the pdf directly to the content folder
+    Run webpage in the background and download the PDF to the project root
     """
     config_uri = str(Path("configs", config_uri))
     runtime_configs = _generate_runtime_settings(config_uri)
-    now = pendulum.now("US/Eastern").format("YYYYMMDD")
+    now = pendulum.now("US/Eastern")
     _generate(
-        file_name_suffix=f"Resume_{now}",
+        file_name_suffix=f"marc_labelle_resume_{now.format('YY-MM-DD')}",
         url="http://localhost:6543/resume/pdf",
         config_uri=config_uri,
-        content_dir=Path(runtime_configs["content_dir"]),
+        output_dir=Path(runtime_configs["root_dir"]),
     )
 
 

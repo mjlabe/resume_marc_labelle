@@ -1,0 +1,70 @@
+<section class="p-0 pb-3 d-flex flex-column" id="skills">
+    <div class="my-auto">
+        <ul class="subheading list-inline list-icons center-icons" style="margin-bottom: -0.7rem;">
+            {% for qualification in qualifications %}
+                <li class="list-inline-item">
+                    <i class="{{ qualification.icon }}"></i>
+                    <p class="qualification-label text-center">{{ qualification.name }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<hr class="divider-full-width">
+
+<section class="pt-2 pb-0 pl-lg-5 pr-lg-5 d-flex flex-column" id="experience">
+    <div class="my-auto">
+        <h2>Experience</h2>
+
+        {% for position in positions %}
+            <div class="resume-item row">
+                <div class="resume-content col-8">
+                    <h4 class="mb-0" style="padding-bottom: -2rem">{{ position.title }}<span
+                            class="mr-3"></span>|<span class="subheading ml-3">{{ position.employer }}</span></h4>
+                </div>
+                <div class="resume-date text-right col">
+                    <span class="text-primary">{{ position.date.start }} - {{ position.date.end }}</span>
+                </div>
+            </div>
+
+            <div>
+                <p class="mb-1">
+                    {{ position.description }}
+                </p>
+
+                <ul class="bullets">
+                    {% for bullet in position.bullets %}
+                        <li>
+                            {% if bullet is mapping %}
+                                <a href="{{ bullet.url }}">{{ bullet.text }}</a>
+                            {% else %}
+                                {{ bullet }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="pl-lg-5 pr-lg-5 pt-3 pb-0 d-flex flex-column" id="education">
+    <div class="my-auto">
+        <h2 class="mb-3">Education</h2>
+
+        {% for institution in educations %}
+            <div class="resume-item row">
+                <div class="resume-content mr-auto col-9">
+                    <h4 class="mb-0">{{ institution.degree_name }} <span class="h5">({{ institution.degree_concentration }} Concentration)</span><span
+                            class="mr-3"></span>|<span class="subheading ml-3">
+                            {{ institution.institution_name }}</span>
+                    </h4>
+                </div>
+                <div class="text-right col">
+                    <span class="text-primary">{{ institution.degree_date }}</span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

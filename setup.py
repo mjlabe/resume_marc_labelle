@@ -30,9 +30,17 @@ setup(
     author_email="",
     url="",
     keywords="web pyramid pylons",
-    packages=find_packages(exclude=["tests"]) + ["resume"],
-    package_dir={"resume": "resume"},
-    package_data={"resume": ["data/*"]},
+    packages=find_packages(exclude=["tests"])
+    + ["resume"]
+    + find_packages(where="vendor/pyramid_precis_creative_template"),
+    package_dir={
+        "resume": "resume",
+        "pyramid_precis_creative_template": "vendor/pyramid_precis_creative_template/pyramid_precis_creative_template",
+    },
+    package_data={
+        "resume": ["data/*"],
+        "pyramid_precis_creative_template": ["static/**/*", "templates/*.jinja2"],
+    },
     include_package_data=True,
     zip_safe=True,
     extras_require={
