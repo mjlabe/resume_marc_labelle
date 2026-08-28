@@ -11,7 +11,7 @@ executive_summary: >
   multiple facets of software engineering, including web development, DevOps, military safety critical 
   systems, mobile development, test automation, and RF systems engineering. Skilled at analyzing problems and finding 
   solutions in a variety of languages. Proven ability to lead and work in a result-oriented team and meet demanding 
-  time goals. Strong written communication skills with experience developing technical proposals and documents.
+  time goals. Strong written communication skills with experience developing technical proposals and documents. Named inventor on two U.S. patents.
 
 qualifications:
   - name: Python
@@ -69,6 +69,7 @@ positions:
       end: Present
       start: Mar 2023
     bullets:
+      - Built hardware systems and scalable backend infrastructure powering ACV's AI vehicle-inspection technology
       - Developed scalable Elasticsearch service to efficiently match machine learning outputs with vehicle arbitration issues
       - Architected configuration-as-code deployment of Tyk gateway with CI/CD testing to quickly and safely expose and track APIs
       - Championed K8s implementation of SaltStack with an API wrapper and Nexus to securely manage embedded system OTA updates
@@ -84,8 +85,7 @@ positions:
     - Lead and mentored team of backend, iOS engineers, contractors, and university students in all aspects of product development
     - Designed and developed API microservices with Django, FastAPI, Postgres, MySQL, Docker, Kafka, Kubernetes, and Jenkins
     - Developed iOS and embedded computer vision algorithms to automatically crop undercarriage images using OpenCV
-    - text: "Developed embedded Linux audio and sensor logger; data used by ML models to reduce arbitration, $1M/yr savings (US Patent)"
-      url: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230360667
+    - Developed embedded Linux audio and sensor logger; data used by ML models to reduce arbitration, $1M/yr savings (<[US Patent](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230360667)>)
     - Drafted software and test requirements documents for contractor deliverables
 
   - title: Senior Engineer
@@ -98,8 +98,7 @@ positions:
       - Lead full-stack and devops developer, building applications for processing intelligence reports and analyzing data
       - Developed and managed agile workflows, providing monthly reports and metrics to the sponsor using C3 for data visualizations
       - Static and dynamic binary code analysis of safety-critical embedded devices to find bugs, vulnerabilities, and verifification
-      - text: "Computational modeling of explosive effects for EOD and Counter-IED methods and devices (US Patent)"
-        url: https://pdfpiw.uspto.gov/.piw?PageNum=0&docid=10921089&IDKey=46B62A4AC241%0D%0A&HomeUrl=http%3A%2F%2Fpatft.uspto.gov%2Fnetacgi%2Fnph-Parser%3FSect1%3DPTO1%2526Sect2%3DHITOFF%2526d%3DPALL%2526p%3D1%2526u%3D%25252Fnetahtml%25252FPTO%25252Fsrchnum.htm%2526r%3D1%2526f%3DG%2526l%3D50%2526s1%3D10921089.PN.%2526OS%3DPN%2F10921089%2526RS%3DPN%2F10921089
+      - Computational modeling of explosive effects for EOD and Counter-IED methods and devices (<[US Patent](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10921089)>)
       - Lead designer and developer of automated test systems for RF signals, communications, system timings, and electrical properties
       - Identified and developed custom Counter-IED solutions for EOD technicians using PIC, Atmel, Arduino, Embedded C and Assembly
       - Worked with contracts and external vendors to expand and develop concepts, designs, testing and acceptance reviews

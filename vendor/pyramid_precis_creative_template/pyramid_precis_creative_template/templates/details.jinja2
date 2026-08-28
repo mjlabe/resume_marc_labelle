@@ -36,8 +36,11 @@
                 <ul class="bullets">
                     {% for bullet in position.bullets %}
                         <li>
-                            {% if bullet is mapping %}
-                                <a href="{{ bullet.url }}">{{ bullet.text }}</a>
+                            {% if '<[' in bullet and '](' in bullet and ')>' in bullet %}
+                                {% set text_before, link_and_after = bullet.split('<[', 1) %}
+                                {% set link_text, url_and_after = link_and_after.split('](', 1) %}
+                                {% set url, text_after = url_and_after.split(')>', 1) %}
+                                {{ text_before }}<a href="{{ url }}">{{ link_text }}</a>{{ text_after }}
                             {% else %}
                                 {{ bullet }}
                             {% endif %}
