@@ -20,6 +20,8 @@ qualifications:
     icon: devicon-django-plain
   - name: FastAPI
     icon: devicon-fastapi-plain
+  - name: GraphQL
+    icon: devicon-graphql-plain
   - name: LabVIEW
     icon: devicon-labview-plain
   - name: Embedded
@@ -52,15 +54,15 @@ qualifications:
 positions:
   - title: Software Engineering Consultant
     employer: LaBelle Consulting
-    description: Consulting engagement for an enterprise AI platform focused on governance, security, and operational visibility.
+    description: Consulting work across enterprise AI platforms and a biometric data-collection product.
     date:
       end: Present
       start: Jun 2026
     bullets:
-      - Developed automated validation frameworks for AI-enabled software workflows
-      - Designed and executed end-to-end integration testing for authentication, connectivity, and credential-management scenarios
-      - Strengthened platform security and reliability by identifying and resolving usage-enforcement vulnerabilities
-      - Expanded test coverage for audit history, system lifecycle, and compliance-related workflows
+      - Built validation frameworks and integration tests for enterprise AI auth, connectivity, audit, and compliance workflows
+      - Improved platform security by identifying and resolving usage-enforcement vulnerabilities
+      - Built a biometric data platform with ESP32 hardware, MicroPython firmware, and a BLE-enabled React Native app
+      - Built Firebase infrastructure with Authentication, Firestore, Cloud Functions, and Storage for mobile-session delivery
 
   - title: Staff Software Engineer, R&D
     employer: ACV Auctions
@@ -69,15 +71,15 @@ positions:
       end: Present
       start: Mar 2023
     bullets:
-      - Built hardware systems and scalable backend infrastructure powering ACV's AI vehicle-inspection technology
+      - Built hardware systems and a scalable, event-driven GraphQL and FastAPI backend powering ACV's AI inspection technology
       - Developed scalable Elasticsearch service to efficiently match machine learning outputs with vehicle arbitration issues
       - Architected configuration-as-code deployment of Tyk gateway with CI/CD testing to quickly and safely expose and track APIs
       - Championed K8s implementation of SaltStack with an API wrapper and Nexus to securely manage embedded system OTA updates
-      - Architected event driven ML backend to run multiple inference models based on combinations of event streams utilizing Kafka
+      - Architected an event-driven ML backend that used combinations of Kafka events to request GPU inference results via gRPC
 
   - title: Lead Software Engineer, R&D
     employer: ACV Auctions
-    description: Led cross-functional team developing microservices, ML systems, mobile apps, and embedded solutions, managing contractors and support.
+    description: Led a cross-functional team across backend, mobile, ML, and embedded systems; managed contractors and support.
     date:
       end: Mar 2023
       start: Sep 2021

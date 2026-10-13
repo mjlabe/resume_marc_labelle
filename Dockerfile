@@ -1,4 +1,4 @@
-FROM python:3.10-bookworm
+FROM python:3.13-slim-bookworm
 
 ARG USER_ID
 ARG GROUP_ID
@@ -16,7 +16,7 @@ RUN groupadd --gid ${GROUP_ID} resumer \
     && chown -R resumer:resumer /code
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -q \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -yq wkhtmltopdf \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -yq chromium wkhtmltopdf \
     && pip install -U pip wheel poetry setuptools==80.9.0 \
     && rm -rf \
         /var/lib/apt/lists/* \

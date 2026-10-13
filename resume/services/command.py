@@ -4,7 +4,7 @@ from contextlib import contextmanager
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
-from subprocess import Popen
+from subprocess import Popen, run
 from time import sleep
 from urllib.error import URLError
 from urllib.request import urlopen
@@ -54,6 +54,25 @@ def _generate_runtime_settings(config_uri: str) -> typing.Dict[str, str]:
     }
 
 
+def _render_html_to_pdf(
+    url: str,
+    destination: Path,
+    run=run,
+):
+    run(
+        [
+            "chromium",
+            "--headless",
+            "--no-sandbox",
+            "--disable-gpu",
+            "--no-pdf-header-footer",
+            f"--print-to-pdf={destination}",
+            url,
+        ],
+        check=True,
+    )
+
+
 def _generate(
     file_name_suffix: str,
     url: str,
@@ -62,8 +81,7 @@ def _generate(
 ):
     pdf = Path(output_dir, f"{file_name_suffix}.pdf")
     with _serve_web(config_uri):
-        with requests.get(url, stream=True) as r:
-            pdf.write_bytes(r.content)
+        _render_html_to_pdf(url, pdf)
 
 
 @click.group()
@@ -82,7 +100,7 @@ def resume_to_pdf(config_uri: str):
     now = pendulum.now("US/Eastern")
     _generate(
         file_name_suffix=f"marc_labelle_resume_{now.format('YY-MM-DD')}",
-        url="http://localhost:6543/resume/pdf",
+        url="http://localhost:6543/resume",
         config_uri=config_uri,
         output_dir=Path(runtime_configs["root_dir"]),
     )

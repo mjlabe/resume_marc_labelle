@@ -1,0 +1,118 @@
+contact_info:
+  first_name: Marc
+  last_name: LaBelle
+  email: mjlabe@gmail.com
+  phone: 585-307-6472
+  linkedin: https://linkedin.com/in/marc-labelle-codes
+  github: https://github.com/mjlabe
+
+executive_summary: > 
+  Self-motivated and highly adaptable problem solver with a Master of Science in Physics and experience in
+  multiple facets of software engineering, including web development, DevOps, military safety critical 
+  systems, mobile development, test automation, and RF systems engineering. Skilled at analyzing problems and finding 
+  solutions in a variety of languages. Proven ability to lead and work in a result-oriented team and meet demanding 
+  time goals. Strong written communication skills with experience developing technical proposals and documents. Named inventor on two U.S. patents.
+
+qualifications:
+  - name: Python
+    icon: devicon-python-plain
+  - name: Django
+    icon: devicon-django-plain
+  - name: FastAPI
+    icon: devicon-fastapi-plain
+  - name: GraphQL
+    icon: devicon-graphql-plain
+  - name: LabVIEW
+    icon: devicon-labview-plain
+  - name: Embedded
+    icon: devicon-embeddedc-plain
+  - name: C++
+    icon: devicon-cplusplus-plain
+  - name: C#
+    icon: devicon-csharp-plain
+  - name: Java
+    icon: devicon-java-plain
+  - name: React
+    icon: devicon-react-original
+  - name: Swift
+    icon: devicon-swift-plain
+  - name: MySQL
+    icon: devicon-mysql-plain
+  - name: Postgres
+    icon: devicon-postgresql-plain
+  - name: AWS
+    icon: devicon-amazonwebservices-plain
+  - name: Kafka
+    icon: devicon-apachekafka-original
+  - name: Docker
+    icon: devicon-docker-plain
+  - name: Elastic
+    icon: devicon-elasticsearch-plain
+  - name: K8s
+    icon: devicon-kubernetes-plain
+
+positions:
+  - title: Software Engineering Consultant
+    employer: LaBelle Consulting
+    description: Consulting work across enterprise AI platforms and a biometric data-collection product.
+    date:
+      end: Present
+      start: Jun 2026
+    bullets:
+      - Built validation frameworks and integration tests for enterprise AI auth, connectivity, audit, and compliance workflows
+      - Improved platform security by identifying and resolving usage-enforcement vulnerabilities
+      - Built Firebase Cloud Functions for artifact validation and time-limited delivery links
+      - Designed Firebase Authentication, Firestore, and Cloud Storage workflows for secure mobile-session delivery
+
+  - title: Staff Software Engineer, R&D
+    employer: ACV Auctions
+    description: Responsible for creating ground-up, business focused solutions to complex problems.
+    date:
+      end: Present
+      start: Mar 2023
+    bullets:
+      - Built hardware systems and a scalable, event-driven GraphQL and FastAPI backend powering ACV's AI vehicle-inspection technology
+      - Developed scalable Elasticsearch service to efficiently match machine learning outputs with vehicle arbitration issues
+      - Architected configuration-as-code deployment of Tyk gateway with CI/CD testing to quickly and safely expose and track APIs
+      - Championed K8s implementation of SaltStack with an API wrapper and Nexus to securely manage embedded system OTA updates
+      - Architected an event-driven ML backend that used combinations of Kafka events to request GPU inference results via gRPC
+
+  - title: Lead Software Engineer, R&D
+    employer: ACV Auctions
+    description: Led a cross-functional team across backend, mobile, ML, and embedded systems; managed contractors and support.
+    date:
+      end: Mar 2023
+      start: Sep 2021
+    bullets:
+    - Lead and mentored team of backend, iOS engineers, contractors, and university students in all aspects of product development
+    - Designed and developed API microservices with Django, FastAPI, Postgres, MySQL, Docker, Kafka, Kubernetes, and Jenkins
+    - Developed iOS and embedded computer vision algorithms to automatically crop undercarriage images using OpenCV
+    - Developed embedded Linux audio and sensor logger; data used by ML models to reduce arbitration, $1M/yr savings (<[US Patent](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230360667)>)
+    - Drafted software and test requirements documents for contractor deliverables
+
+  - title: Senior Engineer
+    employer: NSWC Indian Head, EOD Division
+    description: Lead developer responsible for several multiple programs, including web development, embedded analysis and physics modeling.
+    date:
+      end: Nov 2019
+      start: Oct 2009
+    bullets:
+      - Lead full-stack and devops developer, building applications for processing intelligence reports and analyzing data
+      - Developed and managed agile workflows, providing monthly reports and metrics to the sponsor using C3 for data visualizations
+      - Static and dynamic binary code analysis of safety-critical embedded devices to find bugs, vulnerabilities, and verifification
+      - Computational modeling of explosive effects for EOD and Counter-IED methods and devices (<[US Patent](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10921089)>)
+      - Lead designer and developer of automated test systems for RF signals, communications, system timings, and electrical properties
+      - Identified and developed custom Counter-IED solutions for EOD technicians using PIC, Atmel, Arduino, Embedded C and Assembly
+      - Worked with contracts and external vendors to expand and develop concepts, designs, testing and acceptance reviews
+      - Developed embedded data acquisition logger software that recorded various real-time test data streams simultaneously
+
+educations:
+- institution_name: New Mexico Institute of Mining and Technology
+  degree_concentration: Astrophysics
+  degree_date: May 2009
+  degree_name: Master of Science
+
+- institution_name: State University of New York at Fredonia
+  degree_concentration: Experimental
+  degree_date: May 2007
+  degree_name: Bachelor of Physics
