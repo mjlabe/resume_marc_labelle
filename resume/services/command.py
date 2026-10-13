@@ -16,9 +16,6 @@ import requests
 from PyPDF2 import PdfReader, PdfWriter, PageObject
 from pyramid.paster import bootstrap
 
-from resume import DEFAULT_TEMPLATE, TEMPLATES
-
-
 @contextmanager
 def _serve_web(config_uri: str, content_file: str):
     proc = None
@@ -122,30 +119,6 @@ def resume_to_pdf(config_uri: str, content_file: str):
         output_dir=Path(runtime_configs["root_dir"], "output"),
         content_file=content_file,
     )
-
-
-@cli.command()
-@click.argument("config_name")
-@click.option(
-    "--template",
-    help="Choose a template",
-    type=click.Choice(TEMPLATES),
-    default=DEFAULT_TEMPLATE,
-)
-@click.option("--content-file", help="Name of content file", default="resume_content")
-def new_config(config_name: str, template: str, content_file: str):
-    """
-    Create a new configuration file
-    """
-    config_uri = Path("configs", f"{config_name}.ini")
-    template_ini = Path("configs", "template.ini")
-    example_content = Path("content", "example_content")
-    content_uri = Path("content", f"{content_file}.yaml")
-    if not content_uri.exists():
-        content_uri.write_text(example_content.read_text())
-    template_str = template_ini.read_text()
-    template_str = template_str.format(template=template, content=content_file)
-    config_uri.write_text(template_str)
 
 
 if __name__ == "__main__":

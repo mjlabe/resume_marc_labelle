@@ -8,6 +8,15 @@ PROJECT_ROOT = Path(__file__).parent.parent
 
 
 class ResumeBuildTests(TestCase):
+    def test_uses_only_the_vendored_creative_template(self):
+        requirements = (PROJECT_ROOT / "requirements.txt").read_text()
+        application = (PROJECT_ROOT / "resume" / "__init__.py").read_text()
+        base_config = (PROJECT_ROOT / "configs" / "base.ini").read_text()
+
+        self.assertNotIn("pyramid_resume_template_default", requirements)
+        self.assertNotIn("pyramid_resume_template_default", application)
+        self.assertIn("pyramid_precis_creative_template", base_config)
+
     def test_resume_passes_the_selected_resume_file_to_the_pdf_command(self):
         result = run(
             ["make", "--dry-run", "resume", "RESUME=lead"],
