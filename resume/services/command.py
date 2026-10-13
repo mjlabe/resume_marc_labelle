@@ -1,3 +1,4 @@
+import os
 import typing
 import urllib
 from contextlib import contextmanager
@@ -19,10 +20,19 @@ from resume import DEFAULT_TEMPLATE, TEMPLATES
 
 
 @contextmanager
-def _serve_web(config_uri: str):
+def _serve_web(config_uri: str, content_file: str):
     proc = None
     try:
-        proc = Popen(["pserve", config_uri])
+        proc = Popen(
+            [
+                "pserve",
+                config_uri,
+            ],
+            env={
+                **os.environ,
+                "RESUME_DEFAULT_CONTENT": f"content/{content_file}.yaml",
+            },
+        )
         for _ in range(30):
             try:
                 urlopen("http://localhost:6543/resume", timeout=1)
@@ -78,9 +88,11 @@ def _generate(
     url: str,
     output_dir: Path,
     config_uri: str,
+    content_file: str,
 ):
     pdf = Path(output_dir, f"{file_name_suffix}.pdf")
-    with _serve_web(config_uri):
+    pdf.parent.mkdir(parents=True, exist_ok=True)
+    with _serve_web(config_uri, content_file):
         _render_html_to_pdf(url, pdf)
 
 
@@ -91,7 +103,12 @@ def cli():
 
 @cli.command()
 @click.argument("config_uri", default="resume.ini")
-def resume_to_pdf(config_uri: str):
+@click.option(
+    "--content-file",
+    default="staff",
+    help="Resume content filename without the .yaml suffix",
+)
+def resume_to_pdf(config_uri: str, content_file: str):
     """
     Run webpage in the background and download the PDF to the project root
     """
@@ -99,10 +116,11 @@ def resume_to_pdf(config_uri: str):
     runtime_configs = _generate_runtime_settings(config_uri)
     now = pendulum.now("US/Eastern")
     _generate(
-        file_name_suffix=f"marc_labelle_resume_{now.format('YY-MM-DD')}",
+        file_name_suffix=f"marc_labelle_resume_{content_file}_{now.format('YY-MM-DD')}",
         url="http://localhost:6543/resume",
         config_uri=config_uri,
-        output_dir=Path(runtime_configs["root_dir"]),
+        output_dir=Path(runtime_configs["root_dir"], "output"),
+        content_file=content_file,
     )
 
 

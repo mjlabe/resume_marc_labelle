@@ -1,10 +1,11 @@
 CONFIG ?= resume.ini
+RESUME ?= staff
 
 build:
 	docker-compose build
 
-build-static: config
-	docker-compose run resume-web resume-to-pdf ${CONFIG}
+resume: build config
+	docker-compose run resume-web resume-to-pdf ${CONFIG} --content-file ${RESUME}
 
 config:
 	CONFIG=${CONFIG} \

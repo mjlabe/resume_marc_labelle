@@ -167,6 +167,7 @@ cython_debug/
 .idea
 *.iml
 out
+output/
 gen
 ### Linux template
 *~

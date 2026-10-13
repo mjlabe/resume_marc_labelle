@@ -1,5 +1,10 @@
 # Resume content guidelines
 
+## Repository workflow
+
+- Do not run Git commands or otherwise change Git state unless the user explicitly asks for a specific Git operation.
+- Do not create plans or specs for small changes.
+
 ## Resume variants
 
 - `content/staff.yaml` is the broad staff-engineer resume. Balance backend, platform, embedded, mobile, and delivery work for senior individual-contributor roles.
