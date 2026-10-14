@@ -71,11 +71,11 @@ positions:
       end: Present
       start: Mar 2023
     bullets:
-      - Built hardware systems and a scalable, event-driven GraphQL and FastAPI backend powering ACV's AI vehicle-inspection technology
+      - Built event-driven GraphQL and FastAPI backends powering ACV's AI vehicle-inspection hardware systems and technology
       - Developed scalable Elasticsearch service to efficiently match machine learning outputs with vehicle arbitration issues
       - Architected configuration-as-code deployment of Tyk gateway with CI/CD testing to quickly and safely expose and track APIs
       - Championed K8s implementation of SaltStack with an API wrapper and Nexus to securely manage embedded system OTA updates
-      - Architected an event-driven ML backend that used combinations of Kafka events to request GPU inference results via gRPC
+      - Architected event-driven ML backends using Kafka events to request GPU inference results via gRPC for scalability
 
   - title: Lead Software Engineer, R&D
     employer: ACV Auctions
